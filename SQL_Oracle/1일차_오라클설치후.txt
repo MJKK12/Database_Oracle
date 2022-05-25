@@ -1,0 +1,267 @@
+Microsoft Windows [Version 10.0.19043.1415]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\김민정>sqlplus /nolog
+==> 오라클 명령프롬프트인 SQL> 을 띄우라는 말이다.
+
+SQL*Plus: Release 11.2.0.2.0 Production on 화 1월 4 12:03:18 2022
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+SQL> show user
+==> 현재 오라클 서버에 연결된 사용자가 누구인지 보이라는 말이다.
+USER is ""
+==> 현재 오라클 서버에 연결된 사용자가 없다는 말이다.
+
+SQL> connect system/cclass
+==> 오라클 사용자 계정명은 system, 암호는 cclass인 것으로 연결하라는 말이다.
+Connected.
+==> Connected. 는 연결이 되었다는 말이다.
+
+SQL> show user
+USER is "SYSTEM"
+==> 현재 오라클서버에 연결된 사용자는 SYSTEM 이라는 말이다.
+
+SQL> disconnect
+==> 현재 오라클 서버에 연결된 사용자를 오라클 서버에서 연결을 끊으라는 말이다.
+Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> show user
+USER is ""
+==> 현재 오라클 서버에 연결된 사용자가 없다는 말이다.
+
+[아래 두가지 모두 로그인이 거부됨 (아이디 or 비밀번호가 잘못됨.)
+SQL> connect system/cclas
+ERROR:
+ORA-01017: invalid username/password; logon denied
+==> 비밀번호를 잘못쳤을 때.
+
+SQL> connect sysm/cclass
+ERROR:
+ORA-01017: invalid username/password; logon denied
+==> 아이디를 잘못쳤을 때.
+
+SQL> host
+==> 잠시 운영체제(Windows)의 명령프롬프트로 가겠다는 말이다.
+Microsoft Windows [Version 10.0.19043.1415]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\김민정>exit
+==> 다시 오라클 명령프롬프트로 돌아가겠다는 말이다.
+SQL>
+
+
+SQL> cls
+==> cls는 오라클 명령어가 아니므로 오류발생함.
+SP2-0042: unknown command "cls" - rest of line ignored.
+
+SQL> host cls
+==> 잠시 운영체제(Windows)의 명령프롬프트로 가서 운영체제의 명령어인 cls(화면지우기)를 하라는 말이다.
+
+SQL> host ipconfig/all
+
+Windows IP 구성
+
+   호스트 이름 . . . . . . . . : DESKTOP-8UUB40D
+   주 DNS 접미사 . . . . . . . :
+   노드 유형 . . . . . . . . . : 혼성
+   IP 라우팅 사용. . . . . . . : 아니요
+   WINS 프록시 사용. . . . . . : 아니요
+   DNS 접미사 검색 목록. . . . : Davolink
+
+무선 LAN 어댑터 로컬 영역 연결* 9:
+
+   미디어 상태 . . . . . . . . : 미디어 연결 끊김
+   연결별 DNS 접미사. . . . :
+   설명. . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   물리적 주소 . . . . . . . . : D0-3C-1F-CF-F8-BF
+   DHCP 사용 . . . . . . . . . : 예
+   자동 구성 사용. . . . . . . : 예
+
+무선 LAN 어댑터 로컬 영역 연결* 10:
+
+   미디어 상태 . . . . . . . . : 미디어 연결 끊김
+   연결별 DNS 접미사. . . . :
+   설명. . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #2
+   물리적 주소 . . . . . . . . : D2-3C-1F-CF-F8-BE
+   DHCP 사용 . . . . . . . . . : 아니요
+   자동 구성 사용. . . . . . . : 예
+
+무선 LAN 어댑터 Wi-Fi:
+
+   연결별 DNS 접미사. . . . : Davolink
+   설명. . . . . . . . . . . . : Intel(R) Wi-Fi 6 AX201 160MHz
+   물리적 주소 . . . . . . . . : D0-3C-1F-CF-F8-BE
+   DHCP 사용 . . . . . . . . . : 예
+   자동 구성 사용. . . . . . . : 예
+   링크-로컬 IPv6 주소 . . . . : fe80::d1f:3753:90da:41e1%17(기본 설정)
+   IPv4 주소 . . . . . . . . . : 192.168.219.104(기본 설정)
+   서브넷 마스크 . . . . . . . : 255.255.255.0
+   임대 시작 날짜. . . . . . . : 2022년 1월 3일 월요일 오전 8:23:15
+   임대 만료 날짜. . . . . . . : 2022년 1월 5일 수요일 오전 9:56:21
+   기본 게이트웨이 . . . . . . : 192.168.219.1
+   DHCP 서버 . . . . . . . . . : 192.168.219.1
+   DHCPv6 IAID . . . . . . . . : 265305119
+   DHCPv6 클라이언트 DUID. . . : 00-01-00-01-28-EF-84-81-D0-3C-1F-CF-F8-BE
+   DNS 서버. . . . . . . . . . : 61.41.153.2
+                                 1.214.68.2
+   Tcpip를 통한 NetBIOS. . . . : 사용
+
+이더넷 어댑터 Bluetooth 네트워크 연결:
+
+   미디어 상태 . . . . . . . . : 미디어 연결 끊김
+   연결별 DNS 접미사. . . . :
+   설명. . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   물리적 주소 . . . . . . . . : D0-3C-1F-CF-F8-C2
+   DHCP 사용 . . . . . . . . . : 예
+   자동 구성 사용. . . . . . . : 예
+
+
+SQL> show user
+USER is ""
+SQL> conn system/cclass
+==> connect 대신 conn을 사용할 수 있다. (줄여서 사용할 수 있다.)
+Connected.
+
+SQL> show user
+USER is "SYSTEM"
+
+SQL> disconn
+==> disconnect 대신 disconn을 사용할 수 있다. (줄여서 사용할 수 있다.)
+Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> conn sys/cclass ==> sys 로 연결하려면 반드시 뒤에 SYSDBA or SYSOPER
+ERROR:
+ORA-28009: connection as SYS should be as SYSDBA or SYSOPER
+
+SQL> conn sys/cclass as sysdba
+Connected.
+SQL> show user
+USER is "SYS" ==> SYS가 오라클 데이터베이스 관리자(정) 계정이다.
+
+SQL> disconn
+Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> conn system/cclass
+Connected.
+
+SQL> show user
+USER is "SYSTEM"
+
+SQL> shutdown immediate
+ORA-01031: insufficient privileges
+==> 오라클 데이터베이스 관리자(부) 계정인 system은 오라클 서버를 중지 또는 시작(구동)을 할 수 있는 권한이 없다.
+
+SQL> disconn
+Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> conn sys/cclass as sysdba
+Connected.
+
+SQL> show user
+USER is "SYS"
+
+SQL> shutdown immediate ==> 오라클 서버를 중지시키는 명령어.
+==> 오라클 데이터베이스 관리자(정) 계정인 sys는 오라클 서버를 중지 또는 시작(구동)을 할 수 있는 권한이 있다.
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+
+SQL> conn system/cclass
+ERROR:
+ORA-01034: ORACLE not available ==> 오라클 서버가 중지되었으므로 사용 불가하다.
+ORA-27101: shared memory realm does not exist
+Process ID: 0
+Session ID: 0 Serial number: 0
+
+
+Warning: You are no longer connected to ORACLE.
+
+SQL> conn sys/cclass as sysdba
+Connected to an idle instance.
+==> 현재 오라클 서버가 중지(idle)된 상태에서 sys로 연결됐다는 말이다.
+==> 오라클 서버가 중지된 상태이더라도 오로지 sys 만은 연결이 가능하다. (sys 말고 다른건 연결이 안됨.)
+
+SQL> show user
+USER is "SYS"
+
+SQL> startup ==> 오라클 서버를 구동시켜주는 명령어인데 오로지 sys만 할 수 있다.
+ORACLE instance started.
+
+Total System Global Area 1068937216 bytes
+Fixed Size                         2260048 bytes
+Variable Size                   616563632 bytes
+Database Buffers              444596224 bytes
+Redo Buffers                      5517312 bytes
+Database mounted.
+Database opened.
+
+SQL> show user
+USER is "SYS"
+
+SQL> disconn
+Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> conn system/cclass
+Connected.
+==> sys를 제외한 나머지 모든 오라클 사용자 계정은 반드시 오라클 서버가 구동되어져 있어야만 연결하여 사용할 수 있다.
+
+SQL> show user
+USER is "SYSTEM"
+
+SQL> select * from dba_users;   ==> sqlplus를 사용하여 DB 를 다루고자 할 때, 아래와 같이 결과물을 보기에는
+가독성이 현저히 떨어지므로 좋지 않다.!!
+그러므로 우리는 ORACLE Database 서버를 설치한 후 ORACLE Database 서버를 다루는 툴인 sqldaveloper 를 사용하여 쓰겠다.
+(* sqldeveloper 는 오라클이 아님.!! 툴일 뿐이다.)
+
+USERNAME                                                        USER_ID
+------------------------------------------------------------ ----------
+PASSWORD
+------------------------------------------------------------
+ACCOUNT_STATUS                                                   LOCK_DAT
+---------------------------------------------------------------- --------
+EXPIRY_D DEFAULT_TABLESPACE
+-------- ------------------------------------------------------------
+TEMPORARY_TABLESPACE                                         CREATED
+------------------------------------------------------------ --------
+PROFILE
+------------------------------------------------------------
+INITIAL_RSRC_CONSUMER_GROUP
+------------------------------------------------------------
+EXTERNAL_NAME
+--------------------------------------------------------------------------------
+PASSWORD_VERSION ED AUTHENTICATION_T
+---------------- -- ----------------
+10G 11G          N  PASSWORD
+
+USERNAME                                                        USER_ID
+------------------------------------------------------------ ----------
+PASSWORD
+------------------------------------------------------------
+ACCOUNT_STATUS                                                   LOCK_DAT
+---------------------------------------------------------------- --------
+EXPIRY_D DEFAULT_TABLESPACE
+-------- ------------------------------------------------------------
+TEMPORARY_TABLESPACE                                         CREATED
+------------------------------------------------------------ --------
+PROFILE
+------------------------------------------------------------
+INITIAL_RSRC_CONSUMER_GROUP
+------------------------------------------------------------
+EXTERNAL_NAME
+--------------------------------------------------------------------------------
+PASSWORD_VERSION ED AUTHENTICATION_T
+---------------- -- ----------------
+
+SQL>exit
+Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+
+
+
+
+
+
+
+
+
